@@ -1,0 +1,8 @@
+name = Layered configuration storage
+description = Use multiple configuration storage objects
+version = 1.0
+backdrop = 1.x
+type = config
+config_backend[ConfigLayeredStorage] = config_layered_storage.inc
+
+type = module
