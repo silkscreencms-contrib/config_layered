@@ -34,10 +34,10 @@ $settings['config']['mem_config'] = array(
 );
 ```
 
-With this setup, reads for the `site_name` configuration setting in
-`system.core` will come from the `memory` configuration object, but since the
-memory-based configuration object is immutable, all writes will go to the
-`active_files` configuration object, including writes for `site_name`.
+With this setup, `config_get('system.core', 'site_name')` will read from the
+`memory` configuration object, but since the memory-based configuration object
+is immutable, `config_set('system.core', 'site_name')` will go to the
+`active_files` configuration object.
 
 License
 -------
